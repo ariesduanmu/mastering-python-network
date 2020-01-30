@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+# pexpect using ssh connect
+
 import getpass
 from pexpect import pxssh
 
