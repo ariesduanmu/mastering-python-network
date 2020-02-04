@@ -1,0 +1,31 @@
+---
+- name: Get Juniper Device Facts
+  hosts: "junos_devices"
+  gather_facts: true
+  connection: local
+
+  vars:
+    netconf:
+      host: "{{ ansible_host }}"
+      username: "{{ username }}"
+      password: "{{ password }}"
+      port: 830
+      transport: netconf
+
+  tasks:
+    - name: Checking NETCONF connectivity
+      wait_for:
+        host: "{{ ansible_host }}"
+        port: 830
+        timeout: 5
+      register: output
+
+    # - name: collect default set of facts
+    #   junos_facts:
+    #     provider: "{{ netconf }}"
+    #   register: output
+
+    - name: show output
+      debug:
+        var: output
+      

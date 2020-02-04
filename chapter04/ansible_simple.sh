@@ -1,0 +1,1 @@
+ansible -i hosts 192.168.2.101 -m ping -u root

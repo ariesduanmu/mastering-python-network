@@ -1,5 +1,6 @@
 ---
-- hosts: 127.0.0.1
+- hosts: "cenos"
+  gather_facts: false
   tasks:
     - name: check disk usage
       shell: df > df_temp.txt

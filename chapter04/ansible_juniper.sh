@@ -1,0 +1,1 @@
+python3 /usr/bin/ansible-playbook -i hosts_juniper juniper_playbook.yml -u root -e 'ansible_python_interpreter=/usr/bin/python3'

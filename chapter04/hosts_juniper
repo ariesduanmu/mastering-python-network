@@ -1,0 +1,6 @@
+[junos_devices]
+J1 ansible_host=192.168.2.103
+
+[junos_devices:vars]
+username=netconf
+password=netconf!
