@@ -1,1 +1,0 @@
-ansible-playbook -i hosts_1 df_playbook.yml -u root
